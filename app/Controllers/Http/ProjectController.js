@@ -1,6 +1,6 @@
 'use strict'
 
-/** @typedef {import('@adonisjs/framework/src/Request')} Request */
+/** @typedef {import('@adonisjs/framework/src/Request')} AdonisRequest */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 
@@ -22,7 +22,6 @@ class ProjectController {
   async index ({ request, response }) {
     // const projects = await Project.all()
     const projects = await Project.query().with('user').fetch()
-
     return projects
   }
 
