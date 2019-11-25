@@ -32,4 +32,6 @@ Route.group(() => {
   Route.post('/files', 'FileController.store')
 
   Route.resource('projects', 'ProjectController').apiOnly()
+  // A rota abaixo somente é possível pq não é permitido Task sem Project
+  Route.resource('projects.tasks', 'TaskController').apiOnly()
 }).middleware(['auth'])
