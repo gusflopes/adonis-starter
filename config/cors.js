@@ -17,6 +17,7 @@ module.exports = {
   |
   */
   origin: false,
+  // Recomendado colocar um array com os links no 'origin'
 
   /*
   |--------------------------------------------------------------------------
